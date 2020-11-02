@@ -106,7 +106,7 @@ int main(int argc, char** argv) {
       for (int j = 0; j < B->cols; j++) {
         B->values[i][j] = 0;
       }
-    }
+    }    
   } else {
     for (int i = 0; i < A->rows; i++) {
       for (int j = 0; j < A->cols; j++) {
@@ -120,10 +120,16 @@ int main(int argc, char** argv) {
     }
   }
 
+  for (int i = 0; i < C->rows; i++) {
+      for (int j = 0; j < C->cols; j++) {
+        C->values[i][j] = 0;
+    }
+  }
+
   if (should_print) {
     printf("Matrix A: \n");
     print_matrix(A);
-
+    
     printf("Matrix B: \n");
     print_matrix(B);
   }
