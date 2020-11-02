@@ -126,6 +126,7 @@ int main(int argc, char** argv) {
     }
   }
 
+
   if (should_print) {
     printf("Matrix A: \n");
     print_matrix(A);
@@ -146,6 +147,10 @@ int main(int argc, char** argv) {
     print_matrix(C);
     printf("---- END RESULTS ----\n");
   }
+
+  free_matrix(A);
+  free_matrix(B);
+  free_matrix(C);
 
   if (show_usec) {
     double elapsed = tdiff(time1, time2);
